@@ -2,10 +2,10 @@
 Made for a magic weapon that Crits on 7's and 20's.
 */
 //Get needed values
-//Get needed values
 let dexMod = actor.getRollData().abilities.dex.mod;
 let prof = actor.getRollData().attributes.prof;
 let isCrit = 0;
+let imgSrc = 'H:\Foundry\FoundryData\Data\krindleS.PNG';
 //Define Attack Roll formula
 let formula = '1d20+' + dexMod + '+' +prof;
 //perform Rolls and form tooltips
@@ -45,6 +45,13 @@ critHtml =
 
 //big HTML
 let template = 
+'<div class="dnd5e chat-card item-card">'+
+'<header class="card-header flexrow red-header">'+
+   '<img src= "https://i.imgur.com/YISkjJ1.png" title="Krindle" width="36" height="36"/>'+
+   '<h3 class="item-name">Krindle</h3>'+
+'</header>'+
+'<div>'+
+
 '<div class="dice-roll red-dual">'+
    '<div class="br5e-roll-label">'+ 'Attack'+ '</div>'+
    '<div class="dice-result">'+
@@ -74,6 +81,7 @@ let template =
       '</div>'+
     '</div>'+
 '</div>';
+
 
 
 let sound = CONFIG.sounds.dice
