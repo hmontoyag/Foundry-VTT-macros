@@ -76,11 +76,10 @@ let template =
 '</div>';
 
 
-
-
+let sound = CONFIG.sounds.dice
 let chatData = {
 
     content: template,
-
+    sound: sound
 }
 ChatMessage.create(chatData);
