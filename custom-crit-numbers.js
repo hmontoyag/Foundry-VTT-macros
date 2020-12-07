@@ -23,11 +23,11 @@ let crit1 = '';
 let crit2 = '';
 
 if (atkRoll1.results[0] == 7 || atkRoll1.results[0] == 20){
-   crit1 = 'style="color:green; filter: sepia(0.5) hue-rotate(60deg)"';
+   crit1 = 'style="color:green;background: rgba(76, 175, 80, 0.3);border-color: green"';
    isCrit = 1;
 }
 if (atkRoll2.results[0] == 7 || atkRoll2.results[0] == 20){
-   crit2 = 'style="color:green; filter: sepia(0.5) hue-rotate(60deg)"';
+   crit2 = 'style="color:green;background: rgba(76, 175, 80, 0.3);border-color: green"';
    isCrit = 1;
 }
 //crit html portion for damage
@@ -58,10 +58,10 @@ let template =
 //attack part
       '<div class="dice-formula dice-tooltip">' + formula + '</div>'+
       '<div class="dice-row">'+
-         '<div class="tooltip dual-left dice-row-item"'+ crit1  +'>'+ tooltip1 +'</div>'+
+         '<div class="tooltip dual-left dice-row-item" '+ crit1  +'>'+ tooltip1 +'</div>'+
          '<div class="tooltip dual-right dice-row-item"'+ crit2  +'>'+ tooltip2 +'</div>'+	
       '</div>'+
-      '<div class="dice-row">'+
+      '<div class="dice-row" >'+
          '<h4 class="dice-total dice-row-item"'+ crit1  +'>'+atkRoll1.total+'</h4>'+
          '<h4 class="dice-total dice-row-item"'+ crit2  +'>'+atkRoll2.total+'</h4>'+
       '</div>'+
